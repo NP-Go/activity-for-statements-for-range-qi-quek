@@ -4,20 +4,13 @@ import "fmt"
 
 var numberOne, numberTwo int
 
-func printOddEven(small int, big int) {
+func printOddEven(small int, big int, remainder int) {
 	println("even numbers are")
 	for i := 0; i <= (big - small); i++ {
-		if evenNumber := (small + i); evenNumber%2 == 0 {
-			println(evenNumber)
+		if Number := (small + i); Number%2 == remainder {
+			println(Number)
 		}
 	}
-	println("odd numbers are")
-	for i := 0; i <= (big - small); i++ {
-		if evenNumber := (small + i); evenNumber%2 == 1 {
-			println(evenNumber)
-		}
-	}
-
 }
 
 func main() {
@@ -32,6 +25,7 @@ func main() {
 		numberOne, numberTwo = numberTwo, numberOne
 	}
 
-	printOddEven(numberOne, numberTwo)
+	printOddEven(numberOne, numberTwo, 0)
+	printOddEven(numberOne, numberTwo, 1)
 
 }
